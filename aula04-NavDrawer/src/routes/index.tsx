@@ -5,7 +5,6 @@ import Home from '../screens/Home';
 import Sobre from '../screens/Sobre';
 import Contato from '../screens/Contato';
 import CustomDrawer from '../components/CustomDrawer';
-import Clima from '../screens/Clima';
 
 const Drawer = createDrawerNavigator();
 
@@ -14,17 +13,14 @@ export default function AppRouter() {
         <Drawer.Navigator
             drawerContent={CustomDrawer}
             screenOptions={{
-                headerStyle:{
-                    backgroundColor:'#4caf50',
-                },
                 drawerStyle:{
-                    backgroundColor:"#'rgb(38, 69, 118)",
+                    backgroundColor:"#878383",
                     width:200,
                 },
                 drawerActiveBackgroundColor:"yellow",
-                drawerInactiveBackgroundColor: '#4caf50',
+                drawerInactiveBackgroundColor: 'red',
                 drawerInactiveTintColor:'#000',
-                drawerActiveTintColor:'#000',
+                drawerActiveTintColor:'gold',
             }}
         
         >
@@ -33,13 +29,8 @@ export default function AppRouter() {
                     title:'Inicio'
                 }}
             />
-            <Drawer.Screen name='Sobre' component={Sobre}
-                options={{
-                    title:'Atrações'
-                }}
-            />
+            <Drawer.Screen name='Sobre' component={Sobre}/>
             <Drawer.Screen name='Contato' component={Contato}/>
-            <Drawer.Screen name='Clima' component={Clima}/>
         </Drawer.Navigator>
     )
 }
